@@ -23,7 +23,7 @@ function setup(token_url, view_id) {
         $.get(token_url, function (data) {
             gapi.analytics.auth.authorize({
                 'serverAuth': {
-                    'access_token': data
+                    'access_token': $(data).text()
                 }
             });
         });
